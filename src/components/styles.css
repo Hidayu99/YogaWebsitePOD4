@@ -1,0 +1,40 @@
+.our__team {
+    @apply text-xl font-bold text-gray-500
+}
+
+@media (max-width:600px) {
+    .our__team {
+        @apply text-lg font-bold text-gray-500 mt-[-70px]
+    }
+
+}
+
+.team__card {
+    /* border: 1px solid rgb(233, 224, 224); */
+    /* border-bottom: 4px solid black; */
+    @apply h-[480px] w-[260px]
+}
+
+.team__img {
+    @apply h-[300px] w-[280px]
+    
+}
+
+.team__desc {
+    padding-top: 10px;
+    color: rgb(65, 65, 65);
+    font-size: 14px;
+}
+
+
+@media (max-width:800px) {
+    
+}
+
+.services__btn {
+    height: 30px;
+    width: 100px;
+    background: #B01E68;
+    color: white;
+    margin-top: 15px;
+}
