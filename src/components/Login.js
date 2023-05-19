@@ -81,7 +81,7 @@ function Login() {
         <button type="submit" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2">
           {isLogin ? 'Login' : 'Sign Up'}
         </button>
-      </form> */} 
+      </form> 
       <div className="mt-4">
         {isLogin ? (
           <p>
