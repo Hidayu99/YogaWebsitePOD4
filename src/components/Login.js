@@ -89,7 +89,6 @@ function Login() {
             <button className="text-blue-500" onClick={handleToggleMode}>
               Sign Up
             </button> 
-            <button className="text-blue-500" onClick={signOut}>Sign out</button> 
           </p>
         ) 
         : (
@@ -106,4 +105,4 @@ function Login() {
   );
 }
 
-export default App;
+export default Login;
