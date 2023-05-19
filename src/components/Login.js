@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState  } from 'react';
 import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
@@ -6,14 +6,7 @@ import awsExports from '../aws-exports';
 
 Amplify.configure(awsExports);
 
-function App({signOut, user}) {
-
-//   useEffect(() => {
-//     let isAuth = localStorage.getItem('authToken')
-//     if(isAuth & isAuth !== 'undefined') {
-//        props.history.push('/')
-//     }
-//  }, [])
+function Login() {
 
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
@@ -47,8 +40,8 @@ function App({signOut, user}) {
 
   return (
     <div>
-      {/* <h2 className="text-2xl font-bold mb-4">{isLogin ? 'Login' : 'Sign Up'}</h2>
-      {/* <form onSubmit={handleSubmit}>
+      <h2 className="text-2xl font-bold mb-4">{isLogin ? 'Login' : 'Sign Up'}</h2>
+       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="username" className="block mb-2">
             Email
@@ -97,19 +90,19 @@ function App({signOut, user}) {
       <div className="mt-4">
         {isLogin ? (
           <p>
-            {/* Don't have an account?{' '}
+            * Don't have an account?{' '}
             <button className="text-blue-500" onClick={handleToggleMode}>
               Sign Up
-            </button> */}
+            </button> 
             <button className="text-blue-500" onClick={signOut}>Sign out</button> 
           </p>
         ) 
         : (
           <p>
-            {/* Already have an account?{' '}
+            Already have an account?{' '}
             <button className="text-blue-500" onClick={handleToggleMode}>
               Login
-            </button> */}
+            </button> 
           </p>
         )
         }
@@ -118,4 +111,4 @@ function App({signOut, user}) {
   );
 }
 
-export default withAuthenticator(App);
+export default App;
