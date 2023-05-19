@@ -1,10 +1,5 @@
 import React, { useState  } from 'react';
-import { Amplify } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import awsExports from '../aws-exports';
 
-Amplify.configure(awsExports);
 
 function Login() {
 
@@ -90,7 +85,7 @@ function Login() {
       <div className="mt-4">
         {isLogin ? (
           <p>
-            * Don't have an account?{' '}
+            Don't have an account?{' '}
             <button className="text-blue-500" onClick={handleToggleMode}>
               Sign Up
             </button> 
